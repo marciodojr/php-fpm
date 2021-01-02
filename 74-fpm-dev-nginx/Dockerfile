@@ -16,8 +16,8 @@ RUN apt update && \
     chown -R intec:intec /scripts/entrypoint.sh && \
     chmod +x /scripts/entrypoint.sh
 
-COPY ./../74-fpm-nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ./../74-fpm-nginx/enabled.conf /etc/nginx/sites/enabled.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY enabled.conf /etc/nginx/sites/enabled.conf
 
 USER intec
 
