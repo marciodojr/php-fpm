@@ -13,7 +13,6 @@ RUN apt update && \
     chown -R intec:intec /run/nginx && \
     chown -R intec:intec /var/log/nginx && \
     chown -R intec:intec /var/lib/nginx && \
-    chown -R intec:intec /var/tmp/nginx && \
     chown -R intec:intec /scripts/entrypoint.sh && \
     chmod +x /scripts/entrypoint.sh
 
