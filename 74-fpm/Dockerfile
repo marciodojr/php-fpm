@@ -10,7 +10,7 @@ ENV TERM=xterm-256color \
 LABEL maintainer="Márcio Dias <marciojr91@gmail.com>"
 
 RUN apt update && \
-    apt install -y make php7.4-gd php7.4-imap php7.4-intl php7.4-pdo-mysql php7.4-soap php7.4-imagick nano grc wget && \
+    apt install -y make php7.4-gd php7.4-imap php7.4-intl php7.4-pdo-mysql php7.4-soap php7.4-imagick php7.4-bcmath nano grc wget && \
     apt clean && \
     rm -rf /tmp/* && \
     rm -rf /var/lib/apt/lists/* && \
