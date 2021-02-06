@@ -1,10 +1,21 @@
-# Repositório com imagens do PHP
+# Contains some PHP images with additional extensions
 
-Contém as seguintes imagens
+This repository contains files to build the following images
 
-- 74-fpm
-- 74-fpm-dev: Versão 7.4-fpm com xdebug
-- 74-fpm-nginx: Versão 7.4-fpm com nginx
-- 74-fpm-dev-nginx: Versão 7.4-fpm com nginx e xdebug
+## PHP 7.4
 
-As imagens têm como base as imagens do grupo [PHPDOCKERIO](https://hub.docker.com/u/phpdockerio).
+- 74
+- 74-dev: xdebug
+- 74-nginx: nginx
+- 74-dev-nginx: nginx and xdebug
+
+## PHP 8.0
+
+- 80
+- 80-dev: xdebug
+- 80-nginx: nginx
+- 80-dev-nginx: nginx and xdebug
+
+## Additional Info
+
+Based on [PHPDOCKERIO](https://hub.docker.com/u/phpdockerio).
