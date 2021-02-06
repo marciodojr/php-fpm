@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  php:
+    image: marciodojr/php-fpm:80-dev-nginx
+    container_name: php80-nginx
+    environment:
+      - MY_ENV_VAR=1
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "8888:8080"
