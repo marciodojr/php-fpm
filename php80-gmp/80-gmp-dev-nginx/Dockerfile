@@ -1,4 +1,4 @@
-FROM marciodojr/php-fpm:80-dev
+FROM marciodojr/php-fpm:80-gmp-dev
 
 USER root
 
