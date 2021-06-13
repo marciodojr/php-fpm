@@ -8,6 +8,7 @@ This repository contains files to build the following images
 - 74-dev: xdebug
 - 74-nginx: nginx
 - 74-dev-nginx: nginx and xdebug
+- 74-functions-dev: image for the cloud functions framework with xdebug installed
 
 ## PHP 8.0
 
