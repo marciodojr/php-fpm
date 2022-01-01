@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-nginx
-/usr/sbin/php-fpm8.1 -O
+/usr/sbin/php-fpm8.1 -D -O
+nginx -g 'daemon off;'
