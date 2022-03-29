@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  php:
+    image: marciodojr/php-fpm:81-dev-daemon
+    container_name: php81-dev-daemon
+    environment:
+      - MY_ENV_VAR=1
+    volumes:
+      - .:/var/www/app
