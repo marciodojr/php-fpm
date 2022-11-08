@@ -10,7 +10,7 @@ ENV TERM=xterm-256color \
 LABEL maintainer="Márcio Dias <marciojr91@gmail.com>"
 
 RUN apt update && \
-    apt install -y make php8.1-gd php8.1-imap php8.1-intl php8.1-pdo-mysql php8.1-soap php8.1-imagick php8.1-bcmath nano grc wget && \
+    apt install -y make php8.1-gd php8.1-imap php8.1-intl php8.1-pdo-mysql php8.1-soap php8.1-imagick php8.1-bcmath php8.1-redis nano grc wget && \
     apt clean && \
     rm -rf /tmp/* && \
     rm -rf /var/lib/apt/lists/* && \
