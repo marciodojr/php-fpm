@@ -22,7 +22,8 @@ RUN apt update && \
     chown -R ${USER}:${USER} /run/php && \
     chown -R ${USER}:${USER} /home/${USER}
 
-COPY overrides.conf /etc/php/8.1/fpm/pool.d/z-overrides.conf
+COPY --chown=${USER}:${USER} overrides.conf /etc/php/8.1/fpm/pool.d/z-overrides.conf
+COPY --chown=${USER}:${USER} 98_overrides.ini /etc/php/8.1/fpm/conf.d/98_overrides.ini
 COPY bashrc /home/${USER}/.bashrc
 
 USER ${USER}
