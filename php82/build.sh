@@ -1,19 +1,19 @@
-cd 81
+cd 82
 make build
 make push
 cd ..
 
-cd 81-dev
+cd 82-dev
 make build
 make push
 cd ..
 
-cd 81-dev-nginx
+cd 82-dev-nginx
 make build
 make push
 cd ..
 
-cd 81-nginx
+cd 82-nginx
 make build
 make push
 cd ..
