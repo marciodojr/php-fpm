@@ -2,6 +2,8 @@ FROM marciodojr/php-fpm:81-nginx
 
 USER root
 
+COPY entrypoint.sh /scripts/entrypoint.sh
+
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get clean 
@@ -17,6 +19,9 @@ RUN rm -rf /tmp/* && \
     chmod +x /scripts/entrypoint.sh
 
 RUN mkdir -p /run/php && chown -R intec:intec /run/php
+
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY enabled.conf /etc/nginx/sites/enabled.conf
 
 USER intec
 
