@@ -5,7 +5,6 @@ USER root
 COPY entrypoint.sh /scripts/entrypoint.sh
 
 RUN apt update && \
-    apt-get upgrade -y && \
     apt install -y nginx && \
     apt clean && \
     rm -rf /tmp/* && \
