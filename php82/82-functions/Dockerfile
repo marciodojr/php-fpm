@@ -1,13 +1,12 @@
 from gcr.io/gae-runtimes/buildpacks/php82/run:php82_20231119_8_2_12_RC00
 
 ARG UID=1000
-ARG USER=1000
+ARG USER=intec
+USER root
 
 COPY entrypoint.sh /scripts/entrypoint.sh
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin
 
-# Ao rodar o comando abaixo,  erro de permissão é retornado:
-# Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
 RUN apt update && \
     apt install -y sudo nano grc autoconf gcc make && \
     pecl install xdebug -y && \
