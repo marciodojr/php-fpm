@@ -13,6 +13,7 @@ RUN apt update && \
     apt purge autoconf gcc -y && \
     apt clean && \
     rm -rf /tmp/* && \
+    rm -rf /workspace/* && \
     useradd -G www-data -u ${UID} -d /home/${USER} ${USER} && \
     echo '' > /etc/99-xdebug.ini && \
     chown -R ${USER}:${USER} /etc/99-xdebug.ini && \
@@ -22,9 +23,10 @@ RUN apt update && \
     chmod +x /scripts/entrypoint.sh
 
 USER ${USER}
-WORKDIR /srv/
 
 ENTRYPOINT ["/scripts/entrypoint.sh"]
 
 # Set a runtime name (required by the base image)
 ENV GAE_RUNTIME php82
+
+WORKDIR /srv
