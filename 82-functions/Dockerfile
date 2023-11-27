@@ -15,11 +15,14 @@ RUN apt update && \
     rm -rf /tmp/* && \
     rm -rf /workspace/* && \
     useradd -G www-data -u ${UID} -d /home/${USER} ${USER} && \
+    mkdir -p /srv && \
+    mkdir -p /home/${USER}/.composer && \
     echo '' > /etc/99-xdebug.ini && \
     chown -R ${USER}:${USER} /etc/99-xdebug.ini && \
     chown -R ${USER}:${USER} /srv && \
     chown -R ${USER}:${USER} /var/log && \
     chown -R ${USER}:${USER} /scripts/entrypoint.sh && \
+    chown -R ${USER}:${USER} /home/${USER} && \
     chmod +x /scripts/entrypoint.sh
 
 USER ${USER}
