@@ -1,4 +1,4 @@
-FROM phpdockerio/php:82-fpm
+FROM phpdockerio/php:8.2-fpm
 
 ARG UID=1000
 ARG USER=intec
